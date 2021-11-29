@@ -82,6 +82,7 @@ impl Connection {
 
     pub fn reset_to_flash(&mut self, extra_delay: bool) -> Result<(), Error> {
 
+        println!("test");
         if Connection::get_pid(&self) == 0x1001 { //0x1001 PID of USB-serial-JTAG
             self.serial.write_data_terminal_ready(false)?;
             self.serial.write_request_to_send(false)?;
