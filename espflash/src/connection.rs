@@ -116,6 +116,8 @@ impl Connection {
 
             self.serial.write_data_terminal_ready(false)?;
         }
+        println!("Reset done");
+        std::process::exit(1);
         Ok(())
     }
 
